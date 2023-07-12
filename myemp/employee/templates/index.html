@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>Employee</h1>
+{%load static%}
+<table border="1">
+  {% for x in myemployee %}
+  <tr>
+    <td><a href="update/{{x.id}}">{{x.id}}</a></td>
+    <td>{{x.firstname}}</td>
+    <td>{{x.lastname}}</td>
+    <td><a href="delete/{{x.id}}"><img src="{% static 'images/delete.png'%}" alt="no image" height="30" width="30"></a></td>
+
+  </tr>
+  {%endfor%}
+</table>
+
+<p>
+  <a href="add/">Add Employee</a>
+</p>
+</body>
+</html>
